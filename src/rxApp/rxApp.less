@@ -25,6 +25,7 @@
         background: @appMenuBg;
         line-height: @appLineHeight;
         padding-bottom: 10em;
+        position: relative;
     }
 
     .site-branding {
@@ -116,7 +117,8 @@
 
         .site-title,
         .site-options,
-        .rx-app-nav {
+        .rx-app-nav,
+        .rx-app-help {
             display: none;
         }
     }
@@ -359,6 +361,27 @@
             opacity: 0.2;
         }
     }
+
+    .rx-app-help {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: @appHelpBg;
+        border-top: 1px solid @appHelpBorder;
+        line-height: 2.9em;
+        font-size: .8em;
+
+        .rx-feedback .modal-link {
+            background: url(images/icon-feedback.png) no-repeat 0 calc(~"50% + 1px");
+            vertical-align: middle;
+            color: @orangeText;
+            padding: 0 21px;
+            float: right;
+        }
+    }
+
+
+    // Page Styles
 
     .page-header {
         background: linear-gradient(to bottom, #e7e7e7 0%, #d6d6d6 100%);
